@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "32dae5428c1d6237",
+    "type": "split",
+    "children": [
+      {
+        "id": "31113c18273557a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fcb423cc038d59f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kaiming/Single Image Haze Removal Using Dark Channel Prior 图像暗通道去雾.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bbb79f6b99570f90",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e0fb63fadcea7b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39e1f5820d4c915e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "03b4175af2fc1cc6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "edf7f0c636e86196",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "aeb19fc833317339",
+    "type": "split",
+    "children": [
+      {
+        "id": "c148e99b88fd4d99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69f0c87d702982e8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kaiming/Single Image Haze Removal Using Dark Channel Prior 图像暗通道去雾.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6caa75b166552da9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kaiming/Single Image Haze Removal Using Dark Channel Prior 图像暗通道去雾.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0f6c13d3bc0d664b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "75eb403adc9bcb0e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kaiming/Single Image Haze Removal Using Dark Channel Prior 图像暗通道去雾.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "fcb423cc038d59f7",
+  "lastOpenFiles": [
+    "Pictures/Pasted image 20240329194148.png",
+    "Pictures/Pasted image 20240329193908.png",
+    "Pictures",
+    "新建文件夹",
+    "Pasted image 20240329193908.png",
+    "Kaiming/Single Image Haze Removal Using Dark Channel Prior 图像暗通道去雾.md"
+  ]
+}
