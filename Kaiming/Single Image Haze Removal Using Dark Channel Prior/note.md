@@ -20,9 +20,9 @@ attenuated:衰减的
 # 2     实现方法
 ### 2.1    Dark Channel Prior 
 定义暗通道为一个像素及其附近邻域像素值最小的通道。 
-![[Pasted image 20240329193908.png]]
+![[Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/Pasted image 20240329193908.png]]
 暗通道的先验是指:一个图片如果不包含雾霾，那么暗通道值应该接近于0
-![[Pasted image 20240329194148.png]]
+![[Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/Pasted image 20240329194148.png]]
 
 #### 2.1.1    暗通道先验 补充
 

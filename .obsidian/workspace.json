@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kaiming/Single Image Haze Removal Using Dark Channel Prior/论文笔记.md",
+                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kaiming/Single Image Haze Removal Using Dark Channel Prior/论文笔记.md",
+                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kaiming/Single Image Haze Removal Using Dark Channel Prior/论文笔记.md",
+                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kaiming/Single Image Haze Removal Using Dark Channel Prior/论文笔记.md"
+                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md"
               }
             }
           }
@@ -135,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -149,6 +150,12 @@
   },
   "active": "fcb423cc038d59f7",
   "lastOpenFiles": [
+    "Kaiming/Single Image Haze Removal Using Dark Channel Prior/note.md",
+    "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
+    "Kaiming/Masked Autoencoders Are Scalable Vision Learners",
+    "README.md",
+    "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/Pasted image 20240329193908.png",
+    "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/Pasted image 20240329194148.png",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/19114d326a41a7a2b86671dda68fe38.png",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/Pasted image 20240401111749.png",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/Pasted image 20240401111621.png",
@@ -159,14 +166,9 @@
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/Pasted image 20240401111059.png",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/illustration_of_rgb.py",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/新建 pyfile.py",
-    "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture/Pasted image 20240401105215.png",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture",
-    "Kaiming/Single Image Haze Removal Using Dark Channel Prior/论文笔记.md",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior",
-    "Kaiming/Pasted image 20240401103558.png",
-    "Kaiming/picture/Pasted image 20240401103536.png",
     "Kaiming/picture",
-    "README.md",
     "Pictures",
     "新建文件夹"
   ]
