@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
+                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
+                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
+                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/note.md"
+                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md"
               }
             }
           }
@@ -150,22 +150,23 @@
   },
   "active": "fcb423cc038d59f7",
   "lastOpenFiles": [
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402090232.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402090030.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085831.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085614.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085550.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085355.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085346.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085344.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240401204941.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240401203955.png",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization/picture",
+    "Diffusion/CLASSIFIER-FREE DIFFUSION GUIDANCE",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402090232.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402090030.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085831.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085614.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085550.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085355.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085346.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085344.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240401204941.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240401203955.png",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture",
     "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
     "DiffusionVideo/未命名.md",
-    "DiffusionVideo/Diffusion Model Alignment Using Direct Preference Optimization",
-    "DiffusionVideo",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization",
+    "Diffusion",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/note.md",
     "Kaiming/Masked Autoencoders Are Scalable Vision Learners",
     "README.md",

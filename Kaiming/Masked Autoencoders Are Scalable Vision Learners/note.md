@@ -20,3 +20,16 @@
 
 
 他的方法一页就写完了 剩下做了一堆实验验证有效性。 
+# 3 Method
+1. Masking. 跟ViT一样将图片划分为不重叠的块。 ViT用的是ConV的Stride实现这点。 随机从这些块里面选择一个子集,这个操作记为"random sampling".   大比例的random sampling可以极大降低计算复杂度。 
+2. MAE Encoder. 只接受可见的部分作为输入，用线性投影和位置编码处理后，加入Transformer.  没有Mask  Token。 这样可以训练更大的Encoder
+3. MAE Decoder. 输入编码后的visible patch和mask token.  给mask token加上了位置编码保证有位置信息。  MAE Decoder是独立于Encoder结构的，受下游任务决定。 
+4. 重建目标. 预测pixel values.  损失函数是MSE。 类似BERT，只在masked patches计算loss.  做了关于损失函数的实验。 
+5. 不需要稀疏操作，直接用列表移除固定比例的token.
+# 4 Experiments
+backbone: ViT large
+对比了从头训练200和MAE的方法和微调的方法50轮 
+
+
+
+
