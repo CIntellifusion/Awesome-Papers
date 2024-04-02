@@ -1,4 +1,7 @@
+---
+tags:
+  - dg-publish
+  - dg-home
+---
 
-# Test Deployment of vercel
-some content 
-## Test second title 
+# Test deploy 

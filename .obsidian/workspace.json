@@ -20,7 +20,19 @@
             }
           },
           {
-            "id": "a43ce778e733819d",
+            "id": "0d07ee78ff98e469",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c43e7b7ff4a7f9f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -157,13 +169,18 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "a43ce778e733819d",
+  "active": "c43e7b7ff4a7f9f8",
   "lastOpenFiles": [
-    "Diffusion/CLASSIFIER-FREE DIFFUSION GUIDANCE/note.md",
     "Test.md",
+    "Test.md",
+    "未命名.md",
+    "README.md",
+    "未命名",
+    "Diffusion/CLASSIFIER-FREE DIFFUSION GUIDANCE/note.md",
     "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
     "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
     "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110900.png",
@@ -184,10 +201,8 @@
     "Diffusion",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/note.md",
     "Kaiming/Masked Autoencoders Are Scalable Vision Learners",
-    "README.md",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/illustration_of_rgb.py",
     "Kaiming/Single Image Haze Removal Using Dark Channel Prior/新建 pyfile.py",
-    "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture",
-    "Kaiming/Single Image Haze Removal Using Dark Channel Prior"
+    "Kaiming/Single Image Haze Removal Using Dark Channel Prior/picture"
   ]
 }
