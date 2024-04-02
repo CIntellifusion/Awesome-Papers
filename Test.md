@@ -1,7 +1,6 @@
 ---
-tags:
-  - dg-publish
-  - dg-home
+dg-publish: true
+dg-hone: true
 ---
 
 # Test deploy 
