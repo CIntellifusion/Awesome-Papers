@@ -11,13 +11,28 @@
             "id": "fcb423cc038d59f7",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110900.png"
+                "file": "Diffusion/CLASSIFIER-FREE DIFFUSION GUIDANCE/note.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a43ce778e733819d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Test.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110900.png",
+                "file": "Test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110900.png",
+                "file": "Test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110900.png"
+                "file": "Test.md"
               }
             }
           }
@@ -145,15 +160,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fcb423cc038d59f7",
+  "active": "a43ce778e733819d",
   "lastOpenFiles": [
-    "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110844.png",
+    "Diffusion/CLASSIFIER-FREE DIFFUSION GUIDANCE/note.md",
+    "Test.md",
+    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
     "Kaiming/Masked Autoencoders Are Scalable Vision Learners/note.md",
     "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110900.png",
+    "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110844.png",
     "Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture",
-    "Diffusion/CLASSIFIER-FREE DIFFUSION GUIDANCE/note.md",
     "Diffusion/CLASSIFIER-FREE DIFFUSION GUIDANCE",
-    "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
     "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402090232.png",
     "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402090030.png",
     "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/picture/Pasted image 20240402085831.png",

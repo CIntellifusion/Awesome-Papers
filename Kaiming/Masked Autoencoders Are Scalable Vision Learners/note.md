@@ -7,7 +7,6 @@
 2. **信息密度.** 图片的信息密度要低于自然语言的信息密度。
 3. **解码器角度.** 图片解码器重建的是像素，文本解码器重建的是单词。 The decoder design plays a key role in determining the semantic level of the learned latent representations.
 
-
 # 2 Related Work 
 
 1. Masked Language Modeling. Bert:双向掩码  ； GPT: 单项掩码
@@ -16,19 +15,19 @@
 4. Self-supervised learning. 自监督学习-对比学习
 
 
-
-他的方法一页就写完了 剩下做了一堆实验验证有效性。 
 # 3 Method
 1. Masking. 跟ViT一样将图片划分为不重叠的块。 ViT用的是ConV的Stride实现这点。 随机从这些块里面选择一个子集,这个操作记为"random sampling".   大比例的random sampling可以极大降低计算复杂度。 
 2. MAE Encoder. 只接受可见的部分作为输入，用线性投影和位置编码处理后，加入Transformer.  没有Mask  Token。 这样可以训练更大的Encoder
 3. MAE Decoder. 输入编码后的visible patch和mask token.  给mask token加上了位置编码保证有位置信息。  MAE Decoder是独立于Encoder结构的，受下游任务决定。 
 4. 重建目标. 预测pixel values.  损失函数是MSE。 类似BERT，只在masked patches计算loss.  做了关于损失函数的实验。 
 5. 不需要稀疏操作，直接用列表移除固定比例的token.
+
 # 4 Experiments
 backbone: ViT large
 对比了从头训练200和MAE的方法和微调的方法50轮 
 消融实验的数据都以800轮预训练为准，1600轮没有明显提升。
 MocoV3训练300轮会有提升。 但是MAE每轮只看见25%的patch,但是MocoV3每轮会同时看到两次裁剪后的图片，甚至更多。  MAE训练1600轮的时间比MocoV3训练300轮低。 
+
 ## 4.1 消融实验 
 
 ![[Kaiming/Masked Autoencoders Are Scalable Vision Learners/picture/Pasted image 20240402110900.png]]

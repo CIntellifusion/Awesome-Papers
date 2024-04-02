@@ -5,6 +5,9 @@
 
 **推理时，最终结果可以由条件生成和无条件生成的线性外推获得，生成效果可以引导系数可以调节，控制生成样本的逼真性和多样性的平衡。**
 
+# 1 Introduction 
+Motivation: 训练Classifier会让Difffusion训练更加复杂，希望没有Classifier也可以做Guidance的方法。  混合一个conditional diffusion 的score和一个unconditional diffusion 
+
 
 
 ## Imagen
