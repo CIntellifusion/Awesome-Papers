@@ -20,31 +20,19 @@
             }
           },
           {
-            "id": "0d07ee78ff98e469",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "未命名.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c43e7b7ff4a7f9f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Test.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Test.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Test.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Test.md"
+                "file": "README.md"
               }
             }
           }
@@ -175,10 +163,10 @@
   },
   "active": "c43e7b7ff4a7f9f8",
   "lastOpenFiles": [
-    "Test.md",
-    "Test.md",
     "未命名.md",
     "README.md",
+    "Test.md",
+    "Test.md",
     "未命名",
     "Diffusion/CLASSIFIER-FREE DIFFUSION GUIDANCE/note.md",
     "Diffusion/Diffusion Model Alignment Using Direct Preference Optimization/note.md",
