@@ -1,5 +1,5 @@
 # Awesome-Papers
-Intensive reading of papers. Let's start with works of Kaiming!
+
 
 ## Format 
 ----   theme 1
