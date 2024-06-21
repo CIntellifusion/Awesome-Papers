@@ -1,4 +1,10 @@
-#! https://zhuanlan.zhihu.com/p/703020355
+---
+Date: 2024-06-16
+Title: Template
+dg-publish: false
+tags:
+---
+
 # LLava : visual instruction finetuning
 LLaVA: Large Language and Vision Assistant 
 # 1 Introduction

@@ -1,12 +1,13 @@
----
+#! https://zhuanlan.zhihu.com/p/703682262
+<!-- ---
 Date: 2024-06-15
 Title: VidProM
 dg-publish: true
 tags:
   - Diffusion
   - Dataset
----
-
+--- -->
+# VidProM
 # 1 Introduction
 
 1.67 million unique text-to-video prompts 
@@ -39,14 +40,30 @@ Pika VideoCrafter2 Modelscope etc.
 
 目前的数据集都低估了prompt数据集的重要性。 PromptSource认为用prompt来训练和提问大模型可以有更加高效的结果。 DiffusionDB手机了大量的prompt-image dataset来启发新的研究。 
 
-用一个DiscordChatExporter手机了一段时间内
+
 
 # 3 Method
 
+用一个DiscordChatExporter收集了一段时间内文生视频的prompt，然后抓取了他们的embedding，指定NSFW(not safe for work)的属性内容，最后生成视频。 
+
+![Image](https://pic4.zhimg.com/80/v2-7003292178adddd185c526a8123b2055.png)
+
 # 4 Experiment
-## 4.1 Implementation Details  
+
+相比于文生图的prompt数据集DiffusionDB这个数据集的优势在于
+1. 更多的独立的prompt
+2. 用最新的CLIP提取文本特征，支持更长的上下文
+3. 包含时间维度，动态描述时长的信息。 
+4. 更加复杂更长的prompt
+5. 独特的特征分布情况
+
+![Image](https://pic4.zhimg.com/80/v2-98db1e87b1440e5cb279c75f7513bda4.png)
+
+[WizMap (poloclub.github.io)](https://poloclub.github.io/wizmap/?dataURL=https://huggingface.co/datasets/WenhaoWang/VidProM/resolve/main/data_vidprom_diffusiondb.ndjson&gridURL=https://huggingface.co/datasets/WenhaoWang/VidProM/resolve/main/grid_vidprom_diffusiondb.json)
+
 
 # 5 Summary
 
+- limitation: 视频大多不够长，而且质量并不高
 # 6 Comments
-
+看起来应该是一个挺不错的工作，提供了一个确实足够大的数据集。 

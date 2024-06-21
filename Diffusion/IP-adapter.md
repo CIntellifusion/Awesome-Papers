@@ -1,13 +1,24 @@
+<<<<<<< Updated upstream
 
 ---
+=======
+#! https://zhuanlan.zhihu.com/p/704329549
+<!-- ---
+>>>>>>> Stashed changes
 Date: 2024-06-19
 Title: IP-adapter
 dg-publish: true
 tags:
+<<<<<<< Updated upstream
   - Diffusion 
   - Personalization
 ---
 
+=======
+  - Diffusion
+  - Personalization
+--- -->
+>>>>>>> Stashed changes
 
 # IP-Adapter
 # 1 Introduction

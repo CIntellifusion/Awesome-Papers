@@ -8,16 +8,28 @@ dg-home: true
 # Readme
 Intensive reading of papers. Let's start with works of Kaiming! Other interesting and new papers will also be updated. 
 
-1. reading gains insights. 
-2. broad reading gains ideas. 
+1. [insights] reading gains insights.  
+2. [horizon] broad reading gains ideas. 
 3. Learn to research.
 4. Learn to enjoy research. 
 5. first stage : 100 papers before august
 6. presenting papers using English 
 
-
-
 [Diffusion implementation accompanied by this blog](https://github.com/CIntellifusion/SimpleDiffusion)
+
+# Basic Question 
+- 分清楚问题和方法
+
+
+计算机视觉研究里面的基本问题是什么？
+- how generative models satisfy human needs
+tokenization, representation learning, scaling是重要的，但是他们都是方法。 
+
+对于researcher重要的是什么？
+不同阶段的researcher考虑的东西不一样。 就目前这个阶段而言，horizon是重要的。 
+LLM社区做的成果显著，多模态领域也有很显著的结果，对于我现阶段来说都是可以了解的。 
+
+
 # Paper Review Overview
 
 ## Paper queue 
@@ -55,12 +67,14 @@ Diffusion理论
 古老师最近的关于理论的一些工作:关于视觉工作的本质目标
 谢赛宁老师关于CLIP表征缺陷的一些探索。 
 
+Scale Up 
 ## version 0 视频生成
 - [ ] [[Kaiming/Single Image Haze Removal Using Dark Channel Prior|Single Image Hazing （bit hard for me)]]
 - [ ] [[Kaiming/Moco|Moco]]
 - [ ] [[RepresentationLearning/Efficient SAM|EfficientSAM]]
 - [ ] ScoreBased model 
 - [ ] TextDiffuser 1-2 
+- [ ] Follow Your Emoji 
 - [ ] StyleGAN 2 很久之前看的了； DiffusionAE也引用了这个
 - [x] [[GenerativeModels/VAR 自回归图片生成|VAR 自回归图片生成]]
 - [ ] PYoCo
