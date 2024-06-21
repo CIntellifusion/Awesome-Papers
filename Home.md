@@ -52,7 +52,8 @@ Diffusion理论
 - [ ] Consistency models 
 - [ ] multi-step consistency models 
 
-古老师最近的关于理论的一些工作
+古老师最近的关于理论的一些工作:关于视觉工作的本质目标
+谢赛宁老师关于CLIP表征缺陷的一些探索。 
 
 ## version 0 视频生成
 - [ ] [[Kaiming/Single Image Haze Removal Using Dark Channel Prior|Single Image Hazing （bit hard for me)]]
