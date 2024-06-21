@@ -106,7 +106,7 @@ Q是输入的隐向量Z作为query，K V是文本提示词得到的特征， K�
 ![Image](https://pic4.zhimg.com/80/v2-e4d0211e31604e0e063b5a84890b3485.png)
 
 # 5 Summary
-
+   
 以下是从给定段落中提取的关键信息：
 
 1. **信息丢失问题**：
