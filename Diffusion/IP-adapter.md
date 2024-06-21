@@ -1,12 +1,13 @@
-#! https://zhuanlan.zhihu.com/p/704329549
-<!-- ---
+
+---
 Date: 2024-06-19
 Title: IP-adapter
 dg-publish: true
 tags:
-  - Diffusion
+  - Diffusion 
   - Personalization
---- -->
+---
+
 
 # IP-Adapter
 # 1 Introduction

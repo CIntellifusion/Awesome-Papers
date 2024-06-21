@@ -6,7 +6,7 @@ dg-publish: true
 tags:
   - Diffusion
   - TrainingFree
-  - GenerativeModels
+  - GenerativeModels 
 ---
 # Customizing Realistic Human Photos via Stacked ID Embedding
 # 1 Introduction
