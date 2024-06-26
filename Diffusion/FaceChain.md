@@ -68,5 +68,8 @@ Style-LoRA模型是生成稳定风格的肖像画的基石。对于个人肖像�
 3. audio driven也是有效的 
 # 6 Comments
 
-citable
+## 6.1 skin retouching 任务 
 
+ABPN: Adaptive Blend Pyramid Network for Real-Time Local Retouching of Ultra High-Resolution Photo
+
+![[picture/Pasted image 20240626174638.png]]
