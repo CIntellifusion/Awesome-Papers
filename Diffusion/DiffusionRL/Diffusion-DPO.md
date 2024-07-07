@@ -49,7 +49,7 @@ S(x)=\frac{1}{1+e^{-x}}=\frac{e^{x}}{1+e^{x}}
 $$
 可以得到
 $$
-P_{BT}(x_0^w>x_o^l|c) = \frac{exp(r(c,x_0^w)-r(c,x_0^l))}{1+exp(r(c,x_0^w)-r(c,x_0^l))}=\frac{e^{r(c,x_0^w)}}{e^{r(c,x_0^l)}+e^{r(c,x_0^w)}}
+P_{BT}(x_0^w>x_o^l|c) = \frac{e^{(r(c,x_0^w)-r(c,x_0^l))}}{1+e^{(r(c,x_0^w)-r(c,x_0^l))}}=\frac{e^{r(c,x_0^w)}}{e^{r(c,x_0^l)}+e^{r(c,x_0^w)}}
 $$
 就和之前的式子是相同结构了。 
 然后用二分类问题利用极大似然训练。 
