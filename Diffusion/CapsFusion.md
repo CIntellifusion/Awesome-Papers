@@ -6,7 +6,7 @@ tags:
   - GenerativeModels
   - DataGeneration
 ---
-
+- 世界知识和文本复杂度对文生图的影响
 # 1 Introduction
    
 ## 1.1 Problem Statement

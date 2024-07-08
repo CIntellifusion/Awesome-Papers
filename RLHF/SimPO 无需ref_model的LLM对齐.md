@@ -1,11 +1,14 @@
 ---
 Date: 2024-06-08
-Title: 
+Title: SimPO 无需ref_model的LLM对齐
 dg-publish: true
 tags:
   - RLHF
   - LLM
+  - PEFT
 ---
+# One-line summary 
+通过修改奖励函数，去除掉DPO训练中需要的ref_model
 
 # 1 Introduction
 

@@ -1,8 +1,11 @@
 ---
-Date: 2024-06-16
-Title: Template
+Date: 2024-07-07
+Title: StreamingT2V
 dg-publish: false
 tags:
+  - LongVideo
+  - Video-Diffusion
+  - Diffusion
 ---
 
 # 1 Introduction

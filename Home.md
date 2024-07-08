@@ -96,7 +96,7 @@ Scale Up
 - [x] [[Diffusion/Video Diffusion/EvalCrafter|EvalCrafter]]
 - [x] [[Kaiming/MAE|MAE]]
 - [x] [[Diffusion/Classifier-free Diffusion Guidance|Classifier Free Guidance]]
-- [x] [[Diffusion/DiffusionRL/Diffusion-DPO|Diffusion DPO]] 
+- [x] [[RLHF/Diffusion-DPO|Diffusion DPO]] 
 - [x] [[Diffusion/Video Diffusion/Latent Video Diffusion|Latent Video Diffusion]]
 - [x] [[Diffusion/Unconditional Diffusion|Unconditional Diffusion (First Part Done)]]
 - [x] [[Diffusion/Video Diffusion/VideoCrafter|VideoCrafter]]
