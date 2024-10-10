@@ -1,16 +1,15 @@
 ---
-Date: 2024-06-08
-Title: Diffusion-DPO阅读笔记v2
+Date: 2024-10-08
+Title: Diffusion-DPO阅读笔记v3
 dg-publish: true
 tags:
   - Diffusion
   - RLHF
 ---
-Diffusion-DPO阅读笔记，包含LLM-DPO原文的解析
+Diffusion-DPO阅读笔记，包含LLM-DPO原文的解析和diffusion-dpo的后续工作。 
 # 0 Background
 
-## 0.0 RLHF
-人类反馈强化学习 
+## 0.0 RLHF 人类反馈强化学习 
 RLHF 是一个复杂且经常不太稳定的过程，它首先拟合一个**反应人类偏好的奖励模型**，然后通过强化学习对大型无监督 LM 进行微调以最大化评估奖励，并避免与原始模型相差太远
 ![[picture/Pasted image 20240401165125.png]]
 这里$y_1 > y_2$是偏序关系，表示在prompt x下y1好于y2 
@@ -32,31 +31,35 @@ DPO通过重新构造分布改写损失函数让训练的时候不需要跑rewar
 
 
 # 1 Problem Statement
-LLM可以根据人类偏好进行优化，但是在文生图领域很少在训练过程中考虑对人类偏好的优化。
 
-
+用带有人类偏好的数据优化diffusion模型。 
 # 2 Method
 ## 2.1     Diffusion Models
 
 ## 2.2 Direct Preference Optimization 
 
 ### 2.2.1 奖励函数
-用BT模型建模人类偏好，数据集构造为$D=\{(c,x_0^w,x_o^l)\}$ 分别表示条件，好的结果，坏的结果
-![[picture/Pasted image 20240401202234.png]]
+用BT模型建模人类偏好，设数据集为$D=\{(c,x_0^w,x_o^l)\}$ ，数据集由条件，好的结果，坏的结果三元组构成。 
+$$
+p_{BT}(x_0^w \succ x_0^l | c) = \sigma(r(c,x_0^w)-r(c,x_0^l))
+$$
+
 注意到此处BT模型和[[#0.0 RLHF]]中的BT模型形式不同，但是带入Sigmoid公式
 $$
 S(x)=\frac{1}{1+e^{-x}}=\frac{e^{x}}{1+e^{x}}
 $$
 可以得到
 $$
-P_{BT}(x_0^w>x_o^l|c) = \frac{e^{(r(c,x_0^w)-r(c,x_0^l))}}{1+e^{(r(c,x_0^w)-r(c,x_0^l))}}=\frac{e^{r(c,x_0^w)}}{e^{r(c,x_0^l)}+e^{r(c,x_0^w)}}
+p_{BT}(x_0^w \succ x_o^l|c) = \frac{e^{(r(c,x_0^w)-r(c,x_0^l))}}{1+e^{(r(c,x_0^w)-r(c,x_0^l))}}=\frac{e^{r(c,x_0^w)}}{e^{r(c,x_0^l)}+e^{r(c,x_0^w)}}
 $$
 就和之前的式子是相同结构了。 
+
+
 然后用二分类问题利用极大似然训练。 
 ![[picture/Pasted image 20240401203602.png]]
 
 ### 2.2.2 RLHF
-RLHF训练过程中一方面最小化$r(c,x_0)$的期望，另一方面降低两个分布的KL散度 
+RLHF训练过程中一方面最小化$r(c,x_0)$的期望，另一方面约束待学习的分部与参考分布之间的KL散度 
 ![[picture/Pasted image 20240401203955.png]]
 ### 2.2.3 DPO Objective 
 DPO Objective In Eq. (5) from [33], the unique global optimal solution $p_\theta^*$ takes the form:
@@ -78,9 +81,10 @@ By this reparameterization, instead of optimizing the reward function $r_\phi$ a
 
 这里利用了一些有待研究的参数重整化推导。 
 ## 2.3    DPO for Diffusion models 
-这一节关注把DPO从LLM改到Diffusion上面,数据集记为$D=\{(c,x_0^w,x_o^l)\}$ 
-![[picture/Pasted image 20240402085831.png]]
-> 为什么呢
+用DPO训练diffusion的第一个问题是 现有的参数化分布$p_{\theta}(x_0|c)$不是多项式时间内可以解决的，因为他需要对所有的扩散路径$(x_1,x_2,...,x_T)$求和。   定义在条件c下$x_0$的得分为在扩散路径上得分之和。 
+$$
+r(x_0,c):=\mathbb{E}_{p_\theta(x_{1:T}|x_0,c)}[R(c,x_{0:T})]
+$$
 
 解决这个问题之后，把Loss简化一下，就开始训练。 
 
