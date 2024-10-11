@@ -9,8 +9,6 @@ Latent Diffusion的贡献在于把扩散-去噪过程从图片转移到了隐空
 # Brief Review
 详细的推导看[[Diffusion/Unconditional Diffusion|Unconditional Diffusion]]和[[Diffusion/Classifier-free Diffusion Guidance|Classifier-free Diffusion Guidance]]
 
-
-
 方法部分照例还是一个LDM起手，这里就不再赘述，并且偷懒使用模版了。 
 扩散模型通常由两个过程组成：前向扩散和逆向去噪。 给定输入信号 $x_0$，前向扩散过程定义如下： 
 

@@ -6,6 +6,14 @@ tags:
   - Diffusion
   - Survey
 ---
+# Why Diffusion Success?
+开门见山地我们来讨论一下Diffusion Models从理论到工程为什么如此的成功。 
+
+1. 相比于之前的模型，统一了许多视觉的生成任务。 并且有延伸到判别分割检测任务的潜力。 
+2. 模块化的实现让各个部分的改进可以解耦，训练-推理，加噪-去噪，压缩-重建，这些部分都可以单独的进行优化。 
+3. 社区的支持，Stable-dffusion和Latent Diffusion开始，扩散模型的库变得非常的整洁。 
+TODO: Why Diffusion is not as successful as LLM?
+
 # 0 高频概念
 ## 0.1 贝叶斯公式
 $$

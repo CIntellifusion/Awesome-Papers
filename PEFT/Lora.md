@@ -59,5 +59,26 @@ BA是可学习的矩阵，A初始化为随机高斯分布，B初始化为0，所
 ## 5.2 对于Lora来说 最好的r是多少
 ![[picture/Pasted image 20240413201020.png|Lora在r=1的时候结果也具有竞争力，说明神经网络内在低秩。 同时r的大小对最终结果不太敏感。]]
 ## 5.3 不同r下的子空间相似度
+
 ![[picture/Pasted image 20240413201336.png| top singular-vector direction of A_8和A_64 is most useful]]
+
+
+# 6 LoRA实现
+在一个特定的条件下，我们通过pytorch lightning框架做训练的时候，是没有封装好的Lora的，所以需要我们自己实现。 
+需要对一个模型实现一个LoRA需要最少的关键模块是:
+1. 对原模型的查找函数，负责找到需要被替换为LoRALayer的层
+2. LoRALayer层本身，这个模型对于上下层来说应该是无感的，即他的行为应该和被替换的Linear或者Conv层一致。 
+3. load; unload; save 函数
+
+## 6.2 Lora的peft实现
+
+
+# 7 Lora 改进
+
+## Lora+: 学习率配置方法
+
+
+
+
+## LoRA-GA: 初始化改进来逼近全量微调
 

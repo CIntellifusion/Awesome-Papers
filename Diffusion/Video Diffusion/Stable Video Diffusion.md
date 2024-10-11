@@ -33,7 +33,11 @@ https://github.com/Breakthrough/PySceneDetect Dectection Pipeline for clip cut d
 
 利用image-caption对中间帧进行标注，用V-BLIP对视频进行标注，最后用大语言模型总结前两段标注。 
 
-用dense optical flow估计FPS并过滤掉一定比例的低分视频。 
+
+### 3.1.1 cascaded cutting 
+- FFMPEG 大致cut 
+- pyscenedet 进一步cut 
+- RAFT : dense optical flow最后一步cut 
 
 character recongnition筛选出包含大量文字的视频。 
 

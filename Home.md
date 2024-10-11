@@ -34,7 +34,7 @@ LLM社区做的成果显著，多模态领域也有很显著的结果，对于�
 
 ## Paper queue 
 ## version 1 多模态和视觉大模型
-- [ ] CapsFusion: rethink data at scale 
+- [x] CapsFusion: rethink data at scale 
 - [ ] Flamingo 最早的多模态大模型之一
 - [ ] image speaks image 
 - [ ] seg gpt 
@@ -213,5 +213,5 @@ Scale Up
 currently only for presentation of papers. 
 - High level idea or motivation is more important. 
 - Ready to be challenged, those may rise interesting topics 
-- Be organized for you language 
-- More fluently 
+- Be organized for you language, be clear and be straightforward. 
+- Fluency represents the clarity of your mind.  
