@@ -33,8 +33,14 @@ DPO通过重新构造分布改写损失函数让训练的时候不需要跑rewar
 # 1 Problem Statement
 
 用带有人类偏好的数据优化diffusion模型。 
+
+## 1.1 The difference of training and inference of Diffusion Model
+Difffusion is a multi-step generation process.And diffusion has a very different process during training and inference stage. During training stage, denoising network predict the noise $\epsilon_t$ from an noisty input image $x_t$. During inference stage, denosing network predict  noise iteratively from a gussian noise.  During the inference stage, the denoise process will generate  a series of intermediate noisy images before we get final image. 
+
+
 # 2 Method
 ## 2.1     Diffusion Models
+默认采用DDPM进行加噪音
 
 ## 2.2 Direct Preference Optimization 
 
@@ -59,9 +65,16 @@ $$
 ![[picture/Pasted image 20240401203602.png]]
 
 ### 2.2.2 RLHF
-RLHF训练过程中一方面最小化$r(c,x_0)$的期望，另一方面约束待学习的分部与参考分布之间的KL散度 
+RLHF训练过程中一方面最大化$r(c,x_0)$的期望得分，另一方面约束待学习的条件分布与参考分布之间的KL散度 
 ![[picture/Pasted image 20240401203955.png]]
 ### 2.2.3 DPO Objective 
+实际上要把LLM里面的DPO应用到Diffusion上，最大的问题是 训练模式和推理模式的divergence。 在训练的过程中是一步加噪音，在推理的过程中是反复加噪音去噪音。 但是在LLM里面都是next-token-prediction. 如何把preference的信号用来优化加噪音之后的图片是DPO- Dif fusion面对的最大的问题。 这本篇工作里，这里假设对整条扩散路径的图片序列的期望是原始图片的得分。 【这个假设有很多问题，因此后续有一些改进的工作。主要是fixed dataset 和 offline learning是绑定的，要么使用online的方法在推理阶段进行训练，要么用offline的的方法在训练阶段进行训练】
+
+$$
+r(c,x_0) = \mathbb{E}_{p_{\theta}}(x_{1:T}|x_0,c)[R(c,x_{0:T})]
+$$
+
+
 DPO Objective In Eq. (5) from [33], the unique global optimal solution $p_\theta^*$ takes the form:
 $$
 p_\theta^*\left(\boldsymbol{x}_0 \mid \boldsymbol{c}\right)=p_{\mathrm{ref}}\left(\boldsymbol{x}_0 \mid \boldsymbol{c}\right) \exp \left(r\left(\boldsymbol{c}, \boldsymbol{x}_0\right) / \beta\right) / Z(\boldsymbol{c})
@@ -310,3 +323,21 @@ Al learning feedback:
 
 https://zhuanlan.zhihu.com/p/694392956?utm_psn=1766790705710661632 
 一个关于DPO如何简化RLHF的简单转述 
+
+
+
+# SPO: Step-aware Preference Optimization
+这个SPO实际上是一个reward model的改进版本，而和DPO没什么直接的关系。 
+
+## Introduction
+
+SPO independently evaluates and adjusts the denoising performance at each step. At each timestep, DPO generate a pool of image and find a win-lose pair. Then random select an image to initialize the next denoising step. SPO train a step-aware preference model that can be applied to both noisy and clean images. 
+
+## Related Work 
+
+**Diffusion DPO** can be summarized  to finetune Diffusion model by encouraging its predictions to be more closely align with preferred images and discouraging. them from resembling the dispreferred image. 
+
+
+## Motivation
+
+

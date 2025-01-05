@@ -4,7 +4,6 @@ Title: Template
 dg-publish: false
 tags:
 ---
-
 # 1 Introduction
 
 ## 1.1 Problem Statement
