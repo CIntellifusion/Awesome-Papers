@@ -4,32 +4,45 @@ Title: Home
 dg-publish: true
 dg-home: true
 ---
-
-# Readme
-Intensive reading of papers. Let's start with works of Kaiming! Other interesting and new papers will also be updated. 
-
+# README
+Intensive reading of papers. Welcome to haoyu's paper space.  I will continuously update valuable papers I have read. I have following goals to achieve during building this blog: 
 1. [insights] reading gains insights.  
 2. [horizon] broad reading gains ideas. 
-3. Learn to research.
-4. Learn to enjoy research. 
-5. first stage : 100 papers before august
-6. presenting papers using English 
-
-[Diffusion implementation accompanied by this blog](https://github.com/CIntellifusion/SimpleDiffusion)
+3. Learn to research and learn to enjoy research. 
+4. presenting papers using English 
+[Homepage](https://cintellifusion.github.io/) [My Diffusion Codebase](https://github.com/CIntellifusion/SimpleDiffusion) 
 
 # Basic Question 
-- 分清楚问题和方法
 
 
-计算机视觉研究里面的基本问题是什么？
-- how generative models satisfy human needs
-tokenization, representation learning, scaling是重要的，但是他们都是方法。 
+什么是问题和什么是方法video generation是一个任务，video generation做的不好的地方是问题，RLHF是一个方法 计算机视觉研究里面的基本问题是什么？ how generative models satisfy human needs tokenization, representation learning, scaling是重要的，但是他们都是方法。 
 
-对于researcher重要的是什么？
+
+---
+
+**What is a problem and what is a method?**  
+Video generation is a task. The areas where video generation performs poorly are the problems. RLHF (Reinforcement Learning from Human Feedback) is a method.  
+
+**What are the fundamental problems in computer vision research?**  
+How do generative models satisfy human needs?  
+
+Tokenization, representation learning, and scaling are important, but they are all methods.  
+
+--- 
+
+
+
+- 对于researcher重要的是什么？
 不同阶段的researcher考虑的东西不一样。 就目前这个阶段而言，horizon是重要的。 
 LLM社区做的成果显著，多模态领域也有很显著的结果，对于我现阶段来说都是可以了解的。 
 
-
+- 什么样的paper是好的paper？ 什么样research是好的research？
+paper是research的载体。 一篇好的paper可能需要
+1. 清晰的问题定义
+2. 美观简洁的图
+3. 完整的具有说服力的实验和指标
+4. 和motivation匹配的结论和方法
+一个好的research相比起来就更难定义了。 比如每个人的风格不同。 我比较喜欢的风格是: 发现一个问题，分析一个问题，配套匹配方法。 
 # Paper Review Overview
 
 ## Paper queue 
@@ -148,10 +161,6 @@ Scale Up
 - [x] VAEs
 - [ ] DIffusion Transformer 
 
-# Blog Design
-- [ ] Add tags : Diffusion Contrastive Learning etc. 
-- 外链必须要存在才可以加入 否则会报错 
-- svg图片
 # Practical Advise
 
 ## Tips for Review Papers 
