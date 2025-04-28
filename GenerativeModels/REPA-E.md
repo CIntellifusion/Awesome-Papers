@@ -49,9 +49,14 @@ VAE的latent space有一个方差sigma，在SD和MAR都被rescale到1。 LatentL
 
 用alignment loss作为final generation的代理 
 
-## summary
+## repae summary
 
-这篇文章提出end2end去同时优化vae和diffusion。 在训练的时候，先用vae loss和repa loss去优化vae。 再用diffusion loss和repa loss去优化dit。 两次repa的loss共用一组projector。 然后实验结果显示vae和diffusion的效果都可以同时变好。  e2e-vae和va-vae都对vae的latent space加了dino约束，但e2e-vae能比va-vae效果更好是因为vae和dit是轮流优化的。 但是我感觉是paper里的vae loss和diffusion和repa loss都是分别作用在vae和dit上的，claim e2e有点点奇怪。
+这篇文章提出end2end去同时优化vae和diffusion。 在训练的时候，先用vae loss和repa loss去优化vae。 再用diffusion loss和repa loss去优化dit。 两次repa的loss共用一组projector。 然后实验结果显示vae和diffusion的效果都可以同时变好。 
+
+e2e-vae和va-vae都对vae的latent space加了dino约束，但e2e-vae能比va-vae效果更好是因为vae和dit是轮流优化的。 但是我感觉是paper里的vae loss和diffusion和repa loss都是分别作用在vae和dit上的，不像是完全的e2e，更接近iteratively优化vae和diffusion model。 
+
+受到这个启发，我在想vae 的latent space还有什么性质可能有用的。 比如让vae对噪声可以是robust的，即有$\text{enc}(x) \cdot \alpha_t + \epsilon \beta_t = \text{enc}(\gamma_t \cdot x + \epsilon \sigma_t)$ 。 但是这个性质就是让vae退化成了一个线性变换，而且会让vae丧失掉语义信息。 
+
 
 ### 受到关于 VAE latent space 结构讨论的启发
 
@@ -74,9 +79,7 @@ VAE的latent space有一个方差sigma，在SD和MAR都被rescale到1。 LatentL
 
 存在一组满足以下关系的 \( \gamma_t \) 和 \( \sigma_t \)，即：
 
-$$
-\text{enc}(x) \cdot \alpha_t + \epsilon \beta_t = \text{enc}(\gamma_t \cdot x + \epsilon \sigma_t)
-$$
+$\text{enc}(x) \cdot \alpha_t + \epsilon \beta_t = \text{enc}(\gamma_t \cdot x + \epsilon \sigma_t)$
 
 其中，\( \gamma_t \) 和 \( \sigma_t \) 是在图像空间上加的噪声和方差。这个公式的意思是，通过噪声扰动（由 \( \gamma_t \) 和 \( \sigma_t \) 控制）来模拟 Diffusion 过程。
 
