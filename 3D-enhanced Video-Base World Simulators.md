@@ -1,23 +1,97 @@
 # Paper CheckList 
-- 一边写paper 计划结构
-- 一边做实验 
-- 怎么样讲故事-把他和实验和方法联系起来，让他们是一致的
+- [ ] paper里面的notation formula一定要一致。 
+- [ ] motivation-method-experiment要一致
+- [ ] 实验数据和代码要存档备份 多备份多记录结果 
 
-- task: video generation (long video generation)
-- key observation: 3d consistency improves videos generation consistency 
-- world simulator has two aspects: physical law following and 3D consistency
+# Paper Design
 
-- 3D clouds as **memory** for long video generation 
-- aling 3D reconstruction **representation** with 2D generative models 
+## Story Option 1 World Simulator 
+A World Simulator that unify 3D representation and video prior. 
+3D with dynamic  and Video are two main ways to represent real world. 
+Modeling 3D Pros: consistency. Cons: limited data 
+Modeling Videos Pros: Scalable. Cons: not explicit regularizations 
 
-which is better story: 
-- 3D and Video are  of same importance to world simulation 
-- adding 3D to video 
+- repa-vggt 
+- controlnet injection 
+
+这样的话，两个方法可以融入一个故事里面。 然后其中一个作为主要的实验，另一个就是添头。 
+
+## Story Option 2 REPA-VGGT and Accumulation Error 
+
+### paper 1 VGGT-repa 
+
+> 把VGGT-REPA 拓展研究深入一点，作为主要contribution，不要controlnet的部分。 
+
+3D representation is shared between video frames and serves native global representation/ global memory for long future video generation.  
+
+extend: 
+- why 3D representation could work for video generation? How 3d cooperates with videos. 
+- what's the advantage/disadvantage of 3D feature repa over videovae-repa. Does there's 内在的区别
+- 3D-repa for video and for image has different importance 
+- 3D-repa for general purpose real-world video training. (from-scratch/finetune) and model-agnostic 
+
+之前的accumulation solution: 
+- Dfo: add noise on context 
+- Dfot: partial context noise on context frames 
+- CausalVid: distillation bidirectional video generation model into causal video generation model. 
+
+
+### paper 2 3D memory for Long video generation 
+
+- explicit pointcloud encoder module , refine module as context 
+- 3D aware reinforcement learning finetune 
+- discuss about explicit and implicit 3D context 
+
+
+
+# TODO List
+- [ ] 重新infer video，等着测新的benchmark，现在log的video是gif格式的，而且有后处理。 
+- [ ] 更多的benchmark的结果测出来(Rotation & TUrn Left right benchmark)
+- [ ] 之前对VGGT feature的analysis可以拿出来放在附录里面，论证我们用这个feature的合理性
+- [ ] diffusion feature align 之后 能不能得到点云 可视化出来看看
+- [x] 备份repa-loss的checkpoint和训练记录
+- [ ] ablation要不要repa-dino这些 ？ablattion别的feature的效果 ablation 
+# Tianyu Comments
+- minecraft上要做实验
+- story要怎么讲更能吸引人更有影响力一点
+目前的故事有两个方向一个是world simulator一个是累积误差的角度。 
+
+累计误差的角度 causal vid有实验。 每5帧做一个fvd计算，然后看这个值的变化。 
+
+3D supervision-> repa 
+3D memory -> inject controlnet 
+
+另一个角度是 repa -vggt这个点能不能拓展一点。 我们可不可以有一个更general的结果。 
+
+有趣的地方是： dense head 能不能接一个到vggt上pred出来pointcloud？？ 这个实验要好好设计
+
+paper要中的话，逻辑的完整性很重要。 逻辑的完整性就是motivation-method-experiment是否能形成一个完整的闭环。  
+要想有影响力的话，就是要做大家感兴趣的标题，和简单直观的demostration。 
+
+
+
+# JunLiang Comments
+
+video-repa 我们在这个工作里面要怎么解决。 
+accumulation是一个问题，我们的目标是world simulator。 这两者是不冲突的。 
+# Zheng Liang Comments
+
+methods and insights need to be both.
+
+unify video generation and 3D reconstruction in world simulator. 
+
+Analysis on How it will works 
+
+
+# Paper Draft 
 synllable marco list: 
 {Video-Based World Simulators}
+# Evolving from Video Generation to World Simulation via 3D Representation Alignment
 
-故事从结合video和3D来做world simulator出发，是不是就是另外一个故事了。 
-算了先按照一个初稿写出来就行。 
+
+> Bridging Video Generation and World Simulation via 3D Representation Alignment
+
+> 参考标题 Bridging the gap between low-rank and orthogonal adaptation via householder reflection adaptation
 
 # Introduction (suggested 500 worlds , 3/4 page)
 - p1: task, the significance of the task
@@ -28,7 +102,8 @@ synllable marco list:
 - p6: solution 
 
 (初稿没看worldmem写的，但是感觉思路非常像，不能和他那么像)
-World Simulator aims to model the internal principle of the real world, in other words, predict what the future looks like given the current state. Recent advancement in video generation models has proven video to be an practical (介质）to modeling the world thanks to large scale accisible videos.  However, the data-driven generative models has the nature of inaccurate  3D consitency.  On the other hands, representing real world with 3D sence and dynamics is more effictive way[add ref, worldscore的cite里面找找] but lacks sufficient data to scale up. Thus we propose the combine the two way to get a better world simulator.   
+
+World Simulator aims to model the internal underlying of the real world, essentially by predicting future states based on current observations. Recent advancement in video generation models has proven video to be an practical  medium to modeling the world thanks to large scale accessible videos.  However, the data-driven generative models has the nature of inaccurate  3D consistency.  These data-driven generative models, however, often suffer from poor 3D consistency due to their reliance on 2D observations and implicit scene understanding.
 
 Video Generation Model faces severe 3D inconsistency issues especially in long video generation. The key reason is video generation model often has short context window (8 frames 16 frames) during training.  This issue is more severe when doing downstream tasks like navigation, ego videos when spatial understanding is necessary.  Many methods has been proposed to design different memory mechanism for video generations. Our key insights is we could compress history frames of variable length to a compressed fixed length pointcloud(explicit) or 3D representations(implicitly)
 
@@ -53,8 +128,6 @@ These video generative models has proven helpful in many downstream tasks like a
 	- vggt
 	- duster
 	- MegaSam 
-
-
 ## 2.1 World Simulators 
 
 video-based world simulators.  Sora/Cosmos/xxx uses the 
@@ -77,12 +150,6 @@ world consiste 6D diffusion
 Point Cloud Rendering: by extract pointcloud and rerender to image space, these method could handle xx. 
 # Method 
 现在的方法主要分为两节: 3D-repa 和 3D-controlnet 。 3D-repa是用来解决误差和累积误差的，3D-controlnet是用来增加conherence的，memory机制。 
-
-- [ ] 之前对VGGT feature的analysis可以拿出来放在附录里面，论证我们用这个feature的合理性
-- [ ] diffusion feature align 之后 能不能得到点云 可视化出来看看
-- [x] 备份repa-loss的checkpoint和训练记录
-- [ ] 重新infer video，等着测新的benchmark，现在log的video是gif格式的，而且有后处理。 
-- [ ] 更多的benchmark的结果测出来
 
 ## 3.1 3D REPA for Video Generation 
 
@@ -121,7 +188,14 @@ Only align with generation model with 3D feature can result in better video gene
 Training stage, we uses context frames.  second step: finetune on re10k with vggt condition
 Inference: inital vggt latents is got by initial condition frames. We generate the keyframes of a long video, then interpolate between key frames. The VGGT feature will be updated each time we got new clean frames. The nature of pointcloud makes sure that the condition length is the same with variable length as long as the scene is not exteneded. 
 
+我在想怎么用3D的global feature来benefit 长视频生成。你觉得这个方案怎么样： 我们先根据一帧来recon一个point cloud，然后我们根据很多帧recon一个更完整的pointcloud，然后呢训练一个小模型来补全pointcloud。 然后我们直接把pointcloud稀疏一下 放进模型里面去。
 
+训练pointcloud补全的作用是让ref image很少的时候，也能得到完整的pointcloud。 
+
+直接encode pointcloud的好处是 我们不需要调相机视角什么的，找什么高视角来渲染。他直接就是一个global infomation。这个点云跟相机无关了以后就是整个场景信息。
+而且考虑到我们repa vggt已经work了之后 我是觉得再把feature通过controlnet弄进去有点重复。
+
+直接用pointcloud的另一层好处是 他是显式的 可以讲故事用
 
 # 4 Experiments
 
@@ -143,6 +217,8 @@ Test Dataset:
 1. re10k 100 video x 256 frame 
 2. minecraft(optional since vggt may not work)
 3. automous driving dataset(if 2 is )
+
+
 ## 4.2 main results 
 
 baseline: 
@@ -194,7 +270,6 @@ The 3D context compressioner may suffer qualit gap when the video domain is diff
 3. When the scene is and camera fixed, the 3D information is useless since no spatial challenge for world model. Eg. a video recording a man is talking. 
 
 (this could also serves limiations of this paper.)
-
 
 ## 5.1 Disccusion
 
