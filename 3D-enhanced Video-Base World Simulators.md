@@ -82,7 +82,7 @@ unify video generation and 3D reconstruction in world simulator.
 
 Analysis on How it will works 
 
-
+![[Pasted image 20250617105405.png]]
 # Paper Draft 
 synllable marco list: 
 {Video-Based World Simulators}
