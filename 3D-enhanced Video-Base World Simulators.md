@@ -1,4 +1,66 @@
+
+Unsolved Issue: 
+1. video generation model can't reconstruct pointmap 
+2. 3D memory design for Long video generation （like minutes level) worldmem; spailmem( metaquery)
+3. **3D reward**
+4. revisit， rotation ，  
+5. dynamic scene 
+
+Task: 
+1. video generation ( conditioned on image, camera etc.)
+2. automonous driving 
+3. vla(robots)
+
+
+## Reinforcement Learning for 3D-aware video generation. 
+
+Place: post-training on video generation.
+
+Add spatial intelligence into video generation. 
+
+Target: Improve 3D consistency on video generation. 
+	- long term consistency 
+	- scene consistency  **通过reward学到** 
+	- controllable dynamics 
+
+
+aether: depthmap + rgb 
+## sec 1. 3D reward model 
+what the reward is about. 
+
+naive: VGGT uncertanty map on video generation -> this is about scene consistency. 
+
+But later we need to design a reward model base on VGGT. Key question is the specific reward given on video generation (scene reconstruction and scene generation. )
+
+
+# sec 2. GRPO-variant 
+basically using GRPO to rl on video generation.  ref: flow grpo 
+
+optionally we could use DPO but not very good. 
+
+what should we study? 
+
+- different 3D aware reward 
+- 3D consistency might help general video generation? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Paper CheckList 
+
 - [ ] paper里面的notation formula一定要一致。 
 - [ ] motivation-method-experiment要一致
 - [ ] 实验数据和代码要存档备份 多备份多记录结果 
@@ -36,11 +98,7 @@ extend:
 - CausalVid: distillation bidirectional video generation model into causal video generation model. 
 
 
-### paper 2 3D memory for Long video generation 
 
-- explicit pointcloud encoder module , refine module as context 
-- 3D aware reinforcement learning finetune 
-- discuss about explicit and implicit 3D context 
 
 
 
