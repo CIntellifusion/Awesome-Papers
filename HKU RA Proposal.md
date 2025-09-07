@@ -1,3 +1,26 @@
+# Multi-Agent Robot World Model 
+
+Top-to-down pipeline:
+
+world model for robtics 有什么好处
+
+world model 做simulator或者做policy是两种方法
+
+world model做simulator的好处:  真机采集数据有陈本和安全问题， 仿真环境有gap，基于规则的物理引擎有局限
+
+Pipeline: 
+1. 获取大量的video-action pair。 潜在问题: 获取到合理的action。 
+2. 训练world model。 潜在问题： 生成视频和real world的gap。 multi-agent 的world model的结构设计。 
+3. 基于world model 去simulate出更多数据。 潜在问题：获取更多合理的action。  合成数据的diversity。 
+4. 在生成数据上训练policy model. 这一步暂时没有技术问题
+5. 做真机和仿真机的评测。 仿真和真机的gap，world model的数据是否能绕开sim2real的gap 
+
+第一阶段目标： 完成pipeline的前三步，做出一个能生成足够diverse，模拟物理规律的simulator. 实验验证: 对于任意的action, simulator都能模拟和follow。 
+
+技术设计: multi-agent world simulator 
+
+
+
 # Survey
 
 ## Video World Model for robotics
@@ -16,7 +39,9 @@ Robotics在追求的什么东西： 在不同的任务上泛化更好的机器�
 
 ![[Pasted image 20250812195806.png]]
 
+![[Pasted image 20250829104124.png]]
 
+![[Pasted image 20250829110954.png]]
 ### Unified World Model:
 左边两个小图： 一个是给o,a 预测o' 是属于environment， 另一个o,o'预测a的逆运动模型。policy是给o测a， video prediction是给o测o' . 用一个统一的diffusion同时做action和video的生成。 
 ![[Pasted image 20250812131426.png]]
